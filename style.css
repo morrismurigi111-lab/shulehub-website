@@ -1,0 +1,618 @@
+
+/* =================================
+   SHULEHUB - WEBSITE DESIGN
+   Brand: Purple
+================================= */
+
+:root {
+    --purple: #5f13a5;
+    --purple-dark: #430875;
+    --purple-light: #f3eafb;
+    --background: #fbf9fd;
+    --white: #ffffff;
+    --text: #241b30;
+    --muted: #71677d;
+    --border: #e8dff0;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 90px;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: var(--background);
+    color: var(--text);
+    line-height: 1.7;
+}
+
+a {
+    color: inherit;
+}
+
+button,
+input,
+textarea {
+    font: inherit;
+}
+
+/* HEADER */
+
+.site-header {
+    background: var(--white);
+    border-bottom: 1px solid var(--border);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.nav-container {
+    max-width: 1180px;
+    min-height: 78px;
+    margin: auto;
+    padding: 15px 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 25px;
+}
+
+.brand {
+    text-decoration: none;
+    color: var(--purple);
+    font-size: 28px;
+    font-weight: 800;
+    letter-spacing: -1px;
+}
+
+.brand span {
+    color: var(--purple-dark);
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--muted);
+    font-size: 14px;
+    font-weight: 600;
+    transition: color 0.2s ease;
+}
+
+nav a:hover {
+    color: var(--purple);
+}
+
+nav .nav-cta {
+    background: var(--purple);
+    color: var(--white);
+    padding: 10px 18px;
+    border-radius: 7px;
+}
+
+nav .nav-cta:hover {
+    background: var(--purple-dark);
+    color: var(--white);
+}
+
+/* HERO */
+
+.hero {
+    max-width: 1180px;
+    min-height: 570px;
+    margin: auto;
+    padding: 85px 24px;
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    align-items: center;
+    gap: 60px;
+}
+
+.hero-content {
+    max-width: 600px;
+}
+
+.eyebrow {
+    display: inline-block;
+    color: var(--purple);
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 1.8px;
+    margin-bottom: 18px;
+}
+
+.hero h1 {
+    font-size: clamp(42px, 5vw, 66px);
+    line-height: 1.12;
+    letter-spacing: -2.5px;
+    margin-bottom: 24px;
+}
+
+.hero h1 span {
+    color: var(--purple);
+}
+
+.hero-content > p {
+    max-width: 510px;
+    color: var(--muted);
+    font-size: 17px;
+    margin-bottom: 30px;
+}
+
+.hero-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.button {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 13px 21px;
+    border: 1px solid transparent;
+    border-radius: 7px;
+    font-weight: 700;
+    font-size: 14px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.button:hover {
+    transform: translateY(-2px);
+}
+
+.button-primary {
+    background: var(--purple);
+    color: var(--white);
+}
+
+.button-primary:hover {
+    background: var(--purple-dark);
+}
+
+.button-secondary {
+    background: var(--white);
+    color: var(--purple);
+    border-color: var(--border);
+}
+
+.button-secondary:hover {
+    background: var(--purple-light);
+}
+
+/* HERO VISUAL - CSS ONLY */
+
+.hero-visual {
+    min-height: 390px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    border-radius: 20px;
+    background: linear-gradient(145deg, #f0e2ff, #faf5ff 65%, #e6d1fa);
+}
+
+.visual-orbit {
+    position: absolute;
+    border: 1px solid rgba(95, 19, 165, 0.15);
+    border-radius: 50%;
+}
+
+.orbit-one {
+    width: 340px;
+    height: 340px;
+}
+
+.orbit-two {
+    width: 440px;
+    height: 440px;
+}
+
+.visual-panel {
+    position: relative;
+    width: min(310px, 82%);
+    padding: 28px;
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    border-radius: 15px;
+    background: rgba(255, 255, 255, 0.94);
+    box-shadow: 0 22px 55px rgba(67, 8, 117, 0.15);
+}
+
+.visual-brand {
+    width: 45px;
+    height: 45px;
+    display: grid;
+    place-items: center;
+    border-radius: 10px;
+    background: var(--purple);
+    color: var(--white);
+    font-weight: 800;
+    font-size: 17px;
+    margin-bottom: 23px;
+}
+
+.visual-label {
+    color: var(--muted);
+    font-size: 9px;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+}
+
+.visual-panel h2 {
+    font-size: 29px;
+    line-height: 1.2;
+    margin: 10px 0 20px;
+    letter-spacing: -0.8px;
+}
+
+.visual-line {
+    height: 1px;
+    background: var(--border);
+    margin-bottom: 18px;
+}
+
+.visual-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--muted);
+    font-size: 12px;
+    margin-top: 12px;
+}
+
+.visual-dot {
+    width: 8px;
+    height: 8px;
+    flex-shrink: 0;
+    border-radius: 50%;
+    background: var(--purple);
+}
+
+/* FEATURES */
+
+.section-container {
+    max-width: 1080px;
+    margin: auto;
+    padding: 90px 24px;
+}
+
+.features {
+    border-top: 1px solid var(--border);
+}
+
+.section-heading {
+    max-width: 650px;
+    margin-bottom: 40px;
+}
+
+.section-heading h2,
+.contact-copy h2 {
+    font-size: clamp(30px, 4vw, 42px);
+    line-height: 1.2;
+    letter-spacing: -1.2px;
+    margin-bottom: 14px;
+}
+
+.section-heading > p,
+.contact-copy > p {
+    color: var(--muted);
+}
+
+.feature-list {
+    border-top: 1px solid var(--border);
+}
+
+.feature-item {
+    display: grid;
+    grid-template-columns: 65px 1fr;
+    gap: 18px;
+    padding: 25px 0;
+    border-bottom: 1px solid var(--border);
+}
+
+.feature-number {
+    color: var(--purple);
+    font-size: 14px;
+    font-weight: 800;
+    padding-top: 4px;
+}
+
+.feature-item h3 {
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+
+.feature-item p {
+    max-width: 760px;
+    color: var(--muted);
+    font-size: 15px;
+}
+
+/* INSTITUTIONS */
+
+.institutions {
+    background: var(--purple);
+    color: var(--white);
+    padding: 75px 24px;
+}
+
+.institution-content {
+    max-width: 850px;
+    margin: auto;
+}
+
+.institutions .eyebrow {
+    color: #e4c7ff;
+}
+
+.institutions h2 {
+    max-width: 720px;
+    font-size: clamp(32px, 4vw, 46px);
+    line-height: 1.2;
+    letter-spacing: -1.2px;
+    margin-bottom: 20px;
+}
+
+.institutions p {
+    max-width: 680px;
+    color: #eee0fb;
+    margin-bottom: 28px;
+}
+
+.button-light {
+    background: var(--white);
+    color: var(--purple);
+}
+
+.button-light:hover {
+    background: var(--purple-light);
+}
+
+/* DOWNLOAD */
+
+.download {
+    max-width: 1080px;
+    margin: 60px auto;
+    padding: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    background: var(--white);
+}
+
+.download .eyebrow {
+    margin-bottom: 8px;
+}
+
+.download h2 {
+    font-size: 28px;
+    margin-bottom: 8px;
+}
+
+.download p {
+    max-width: 620px;
+    color: var(--muted);
+    font-size: 14px;
+}
+
+.download-status {
+    flex-shrink: 0;
+    background: var(--purple-light);
+    color: var(--purple);
+    padding: 10px 15px;
+    border-radius: 30px;
+    font-size: 12px;
+    font-weight: 800;
+}
+
+/* CONTACT */
+
+.contact {
+    display: grid;
+    grid-template-columns: 0.8fr 1.2fr;
+    gap: 70px;
+    align-items: start;
+    border-top: 1px solid var(--border);
+}
+
+.contact-copy {
+    padding-top: 10px;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+}
+
+.contact-form label {
+    color: var(--text);
+    font-size: 13px;
+    font-weight: 700;
+    margin-bottom: 7px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 19px;
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    background: #fdfbff;
+    color: var(--text);
+    font-size: 14px;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    outline: 2px solid var(--purple);
+    outline-offset: 1px;
+}
+
+.contact-form textarea {
+    resize: vertical;
+}
+
+.contact-form button {
+    width: 100%;
+}
+
+.form-note {
+    color: var(--muted);
+    font-size: 11px;
+    text-align: center;
+    margin-top: 12px;
+}
+
+/* FOOTER */
+
+.site-footer {
+    background: #260443;
+    color: #e7d9f2;
+    text-align: center;
+    padding: 35px 20px;
+}
+
+.footer-brand {
+    display: inline-block;
+    color: var(--white);
+    margin-bottom: 5px;
+}
+
+.footer-brand span {
+    color: #d9b5ff;
+}
+
+.site-footer > p {
+    font-size: 13px;
+}
+
+.copyright {
+    margin-top: 18px;
+    color: #c4b0d4;
+    font-size: 12px !important;
+}
+
+/* RESPONSIVE DESIGN */
+
+@media (max-width: 850px) {
+    .nav-container {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    nav {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 12px 18px;
+    }
+
+    .hero {
+        grid-template-columns: 1fr;
+        gap: 40px;
+        padding-top: 60px;
+    }
+
+    .hero-content {
+        max-width: 680px;
+    }
+
+    .hero-visual {
+        min-height: 350px;
+    }
+
+    .contact {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .download {
+        margin-left: 24px;
+        margin-right: 24px;
+    }
+}
+
+@media (max-width: 560px) {
+    .nav-container {
+        padding: 14px 18px;
+    }
+
+    nav {
+        gap: 8px 13px;
+    }
+
+    nav a {
+        font-size: 12px;
+    }
+
+    nav .nav-cta {
+        padding: 7px 11px;
+    }
+
+    .hero {
+        padding: 50px 20px;
+    }
+
+    .hero h1 {
+        letter-spacing: -1.5px;
+    }
+
+    .hero-content > p {
+        font-size: 15px;
+    }
+
+    .hero-actions {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .hero-visual {
+        min-height: 320px;
+    }
+
+    .section-container {
+        padding: 65px 20px;
+    }
+
+    .feature-item {
+        grid-template-columns: 35px 1fr;
+        gap: 10px;
+    }
+
+    .institutions {
+        padding: 55px 20px;
+    }
+
+    .download {
+        margin: 35px 20px;
+        padding: 25px;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .contact-form {
+        padding: 22px;
+    }
+}
